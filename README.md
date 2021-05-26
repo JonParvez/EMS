@@ -1,16 +1,22 @@
 # EMS
 A Simple Demo Rest API of Employee Management
 
-Database Name: EmployeeRecords
+## Database Name: 
+EmployeeRecords
 
-Table Name: Employee
+## Table Name: 
+Employee
 
-Columns:
+## Columns:
 Id,
 FirstName,
 MiddleName,
 LastName	
 
-Programming Language: C#
+## Programming Language: 
+C#
 
-Technologies/Framework Used: ASP.NET Core 5, Entity Framework Core, RESTful Web API, Repository Pattern, Dependency Injection 
+## Technologies/Framework Used: 
+ASP.NET Core 5, Entity Framework Core, RESTful Web API, Repository Pattern, Dependency Injection 
+
+#### ***DB Script is attached in DBScripts folder inside the solution
