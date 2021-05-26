@@ -6,9 +6,9 @@ Database Name: EmployeeRecords
 Table Name: Employee
 
 Columns:
-Id
-FirstName
-MiddleName
+Id,
+FirstName,
+MiddleName,
 LastName	
 
 Programming Language: C#
