@@ -41,7 +41,7 @@ namespace EMS_API.Controllers
             try
             {
                 if (_EmployeeService.DeleteEmployee(Id))
-                    return Ok("Deleted Successfully");
+                    return Ok("Deleted Successfully!");
                 else
                     return BadRequest();
             }
@@ -57,7 +57,7 @@ namespace EMS_API.Controllers
             try
             {
                 if (_EmployeeService.UpdateEmployee(employee))
-                    return Ok("Updated Successfully");
+                    return Ok("Updated Successfully!");
                 else
                     return BadRequest();
             }
