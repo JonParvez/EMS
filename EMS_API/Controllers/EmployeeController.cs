@@ -43,7 +43,7 @@ namespace EMS_API.Controllers
                 if (_EmployeeService.DeleteEmployee(Id))
                     return Ok("Deleted Successfully!");
                 else
-                    return BadRequest();
+                    return NotFound();
             }
             catch (Exception)
             {
@@ -59,7 +59,7 @@ namespace EMS_API.Controllers
                 if (_EmployeeService.UpdateEmployee(employee))
                     return Ok("Updated Successfully!");
                 else
-                    return BadRequest();
+                    return NotFound();
             }
             catch (Exception)
             {

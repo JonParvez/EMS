@@ -47,12 +47,20 @@ namespace EMS_BusinessLayer.Service
             try
             {
                 var item = _Employee.GetById(Id);
-                _Employee.Delete(item);
-                return true;
+                if (item != null)
+                {
+                    _Employee.Delete(item);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
             }
             catch (Exception)
             {
-                return true;
+                throw;
             }
 
         }
@@ -62,15 +70,22 @@ namespace EMS_BusinessLayer.Service
             try
             {
                 var dataToBeUpdated = _Employee.GetById(employee.Id);
-                dataToBeUpdated.FirstName = employee.FirstName;
-                dataToBeUpdated.MiddleName = employee.MiddleName;
-                dataToBeUpdated.LastName = employee.LastName;
-                _Employee.Update(dataToBeUpdated);
-                return true;
+                if (dataToBeUpdated != null)
+                {
+                    dataToBeUpdated.FirstName = employee.FirstName;
+                    dataToBeUpdated.MiddleName = employee.MiddleName;
+                    dataToBeUpdated.LastName = employee.LastName;
+                    _Employee.Update(dataToBeUpdated);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception)
             {
-                return true;
+                throw;
             }
         }
     }
